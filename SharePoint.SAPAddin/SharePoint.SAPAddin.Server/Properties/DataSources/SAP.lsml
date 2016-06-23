@@ -29,7 +29,7 @@
     <DataService.ConnectionProperties>
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="6c650b3c-6d5b-479b-b452-4b6eed7801d6" />
+        Value="a6932075-9acb-44e1-9c94-7cf08533fac0" />
       <ConnectionProperty
         Name="ProjectMetadata"
         Value="SAP" />

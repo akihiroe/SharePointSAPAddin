@@ -57,9 +57,11 @@
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="ProductId"
+        IsOptional="True"
         ParameterType=":String?" />
       <QueryOperationParameter
         Name="Category"
+        IsOptional="True"
         ParameterType=":String?" />
     </QueryOperation>
   </EntityContainer>
