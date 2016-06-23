@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityContainer
+    Name="SAP"
+    DataProvider="AstoriaDataProvider">
+    <EntityContainer.Attributes>
+      <ODataProviderFlavor
+        Value="SAP" />
+      <Partial
+        IsPrimary="True" />
+    </EntityContainer.Attributes>
+    <SubmitOperation
+      Name="SaveChanges" />
+  </EntityContainer>
+  <DataService
+    Name="SAPDataService"
+    EntityContainer="SAP">
+    <DataService.Attributes>
+      <CsdlEntityContainer
+        Name="ZGWSAMPLE_SRV"
+        Namespace="ZGWSAMPLE_SRV" />
+      <Partial
+        IsPrimary="True" />
+    </DataService.Attributes>
+    <DataService.ConnectionProperties>
+      <ConnectionProperty
+        Name="ConnectionStringGuid"
+        Value="6c650b3c-6d5b-479b-b452-4b6eed7801d6" />
+      <ConnectionProperty
+        Name="ProjectMetadata"
+        Value="SAP" />
+    </DataService.ConnectionProperties>
+  </DataService>
+</ServiceApplication>

@@ -1,0 +1,3 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feature deploymentPath="$SharePoint.Project.FileNameWithoutExtension$_$SharePoint.Feature.FileNameWithoutExtension$" title="SharePoint.SAPAddin.SharePoint Feature1" dslVersion="1.0.0.0" Id="a45396a9-38c0-4c85-becd-57ecb64b9469" featureId="a45396a9-38c0-4c85-becd-57ecb64b9469" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/FeatureModel">
+</feature>

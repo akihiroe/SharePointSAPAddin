@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Product">
+    <EntityType.Attributes>
+      <NotSearchable />
+    </EntityType.Attributes>
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ProductId"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="10" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="TypeCode"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="2" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Category"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="40" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SupplierId"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SupplierName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="80" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TaxTarifCode"
+        PropertyType=":Byte?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MeasureUnit"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WeightMeasure"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="13"
+            Scale="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WeightUnit"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Price"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="23"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CurrencyCode"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Width"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="13"
+            Scale="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Depth"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="13"
+            Scale="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Height"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="13"
+            Scale="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DimUnit"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ProductPicUrl"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="SAP">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="ProductCollection"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Product" />
+    <QueryOperation
+      Name="ProductCollection_Single"
+      ReturnType="Product">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="パラメーターで指定された ID を持つエンティティを返します。" />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ProductId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ProductId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ProductCollection" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductId"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="取得するエンティティの 'ProductId' キー プロパティの値。" />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ProductCollection_SingleOrDefault"
+      ReturnType="Product">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="パラメーターで指定された ID を持つエンティティを返します。該当するエンティティが存在しない場合は null を返します。" />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ProductId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ProductId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ProductCollection" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductId"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="取得するエンティティの 'ProductId' キー プロパティの値。" />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SAPDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="ProductCollection">
+      <EntitySetMapping.Attributes>
+        <CsdlEntitySet
+          EntityTypeName="Product"
+          EntityTypeNamespace="ZGWSAMPLE_SRV"
+          Name="ProductCollection"
+          EntityType="Product" />
+        <CsdlProperty
+          Name="ProductId"
+          Property="Product/Properties[ProductId]" />
+        <CsdlProperty
+          Name="TypeCode"
+          Property="Product/Properties[TypeCode]" />
+        <CsdlProperty
+          Name="Category"
+          Property="Product/Properties[Category]" />
+        <CsdlProperty
+          Name="Name"
+          Property="Product/Properties[Name]" />
+        <CsdlProperty
+          Name="Description"
+          Property="Product/Properties[Description]" />
+        <CsdlProperty
+          Name="SupplierId"
+          Property="Product/Properties[SupplierId]" />
+        <CsdlProperty
+          Name="SupplierName"
+          Property="Product/Properties[SupplierName]" />
+        <CsdlProperty
+          Name="TaxTarifCode"
+          Property="Product/Properties[TaxTarifCode]" />
+        <CsdlProperty
+          Name="MeasureUnit"
+          Property="Product/Properties[MeasureUnit]" />
+        <CsdlProperty
+          Name="WeightMeasure"
+          Property="Product/Properties[WeightMeasure]" />
+        <CsdlProperty
+          Name="WeightUnit"
+          Property="Product/Properties[WeightUnit]" />
+        <CsdlProperty
+          Name="Price"
+          Property="Product/Properties[Price]" />
+        <CsdlProperty
+          Name="CurrencyCode"
+          Property="Product/Properties[CurrencyCode]" />
+        <CsdlProperty
+          Name="Width"
+          Property="Product/Properties[Width]" />
+        <CsdlProperty
+          Name="Depth"
+          Property="Product/Properties[Depth]" />
+        <CsdlProperty
+          Name="Height"
+          Property="Product/Properties[Height]" />
+        <CsdlProperty
+          Name="DimUnit"
+          Property="Product/Properties[DimUnit]" />
+        <CsdlProperty
+          Name="ProductPicUrl"
+          Property="Product/Properties[ProductPicUrl]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityContainer
+    Name="SAP">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <QueryOperation
+      Name="KeywordQuery"
+      ReturnType="Product*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ProductId" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="ProductId" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Contains">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Category" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Category" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ProductCollection" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductId"
+        ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="Category"
+        ParameterType=":String?" />
+    </QueryOperation>
+  </EntityContainer>
+</ServiceApplication>

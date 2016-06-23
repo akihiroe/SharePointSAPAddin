@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{581633EB-B896-402F-8E60-36F3DA191C85}") = "SharePoint.SAPAddin", "SharePoint.SAPAddin\SharePoint.SAPAddin.lsxtproj", "{A7C058C7-5C66-4EBB-BB73-2C5AF46C8550}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharePoint.SAPAddin.Server", "SharePoint.SAPAddin\SharePoint.SAPAddin.Server\SharePoint.SAPAddin.Server.csproj", "{5A879C77-40A8-4A38-9AB0-454484F9AFB3}"
+EndProject
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "SharePoint.SAPAddin.HTMLClient", "SharePoint.SAPAddin\SharePoint.SAPAddin.HTMLClient\SharePoint.SAPAddin.HTMLClient.jsproj", "{8C49B8AB-6A78-4261-BC5B-1C6D012D8DB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharePoint.SAPAddin.SharePoint", "SharePoint.SAPAddin\SharePoint.SAPAddin.SharePoint\SharePoint.SAPAddin.SharePoint.csproj", "{9B0117AD-AF3B-4607-A3BC-81622D16A077}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7C058C7-5C66-4EBB-BB73-2C5AF46C8550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7C058C7-5C66-4EBB-BB73-2C5AF46C8550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7C058C7-5C66-4EBB-BB73-2C5AF46C8550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7C058C7-5C66-4EBB-BB73-2C5AF46C8550}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A879C77-40A8-4A38-9AB0-454484F9AFB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A879C77-40A8-4A38-9AB0-454484F9AFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A879C77-40A8-4A38-9AB0-454484F9AFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A879C77-40A8-4A38-9AB0-454484F9AFB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C49B8AB-6A78-4261-BC5B-1C6D012D8DB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C49B8AB-6A78-4261-BC5B-1C6D012D8DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C49B8AB-6A78-4261-BC5B-1C6D012D8DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C49B8AB-6A78-4261-BC5B-1C6D012D8DB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B0117AD-AF3B-4607-A3BC-81622D16A077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B0117AD-AF3B-4607-A3BC-81622D16A077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B0117AD-AF3B-4607-A3BC-81622D16A077}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9B0117AD-AF3B-4607-A3BC-81622D16A077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B0117AD-AF3B-4607-A3BC-81622D16A077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B0117AD-AF3B-4607-A3BC-81622D16A077}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
